@@ -18,14 +18,16 @@ import Dashboard from "./scenes/dashboard";
 
 function App() {
   const [theme, colorMode] = useMode();
+  //const [isSiderbar, setIsSidebar] = useState(true);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
+        <Sidebar  />
           <main className="content">
-            <Topbar />
+            <Topbar  />
             <Routes>
               <Route path="/" element={<Dashboard />} />
               {/* <Route path="/team" element={<Team />} /> */}
